@@ -169,5 +169,6 @@
 	<classpathentry kind="lib" path="E:/hadoop-2.5.2/share/hadoop/common/lib/activation-1.1.jar"/>
 	<classpathentry kind="lib" path="E:/hadoop-2.5.2/share/hadoop/common/hadoop-nfs-2.5.2.jar"/>
 	<classpathentry kind="lib" path="E:/hadoop-2.5.2/share/hadoop/common/hadoop-common-2.5.2.jar"/>
+	<classpathentry kind="lib" path="E:/java jar/wikiclean-1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
