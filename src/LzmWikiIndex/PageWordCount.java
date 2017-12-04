@@ -19,7 +19,6 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
-import org.apache.hadoop.util.GenericOptionsParser;
 
 import org.wikiclean.WikiClean;
 
@@ -44,7 +43,7 @@ public class PageWordCount {
 			String text = cleaner.clean(doc);
 			char txt[] = text.toLowerCase().toCharArray();
 			for (int i = 0; i < txt.length; ++i) {
-				if ('a' <= txt[i] || txt[i] <= 'z')
+				if (txt[i] <= 'a' || txt[i] >= 'z')
 					txt[i] = ' ';
 			}
 			
