@@ -1,5 +1,10 @@
 package LzmWikiIndex;
 
+/**
+ * Created by lzmhhh123 on 12/4/17
+ * <lzmhhh123@gmail.com>
+ */
+
 import java.io.IOException;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;

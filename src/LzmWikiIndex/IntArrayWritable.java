@@ -1,5 +1,10 @@
 package LzmWikiIndex;
 
+/**
+ * Created by lzmhhh123 on 12/6/17
+ * <lzmhhh123@gmail.com>
+ */
+
 import org.apache.hadoop.io.ArrayWritable;
 import org.apache.hadoop.io.IntWritable;
 

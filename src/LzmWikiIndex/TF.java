@@ -1,11 +1,15 @@
 package LzmWikiIndex;
 
+/**
+ * Created by lzmhhh123 on 12/5/17
+ * <lzmhhh123@gmail.com>
+ */
+
 import java.io.IOException;
 import java.util.StringTokenizer;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.ArrayWritable;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Writable;
 import org.apache.hadoop.io.DoubleWritable;
