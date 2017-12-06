@@ -18,8 +18,10 @@ hadoop jar LzmWikiIndex.jar LzmWikiIndex.TF ${WikipediaPathOnHadoop} ${TFOutputP
 hadoop jar LzmWikiIndex.jar LzmWikiIndex.DF ${TFOutputPath}/part-r-00000 ${DFOutputPath}
 hadoop jar LzmWikiIndex.jar LzmWikiIndex.TF_IDF ${DFOutputPath}/part-r-00000 ${TFOutputPath}/part-r-00000 ${TF-IDFOutputPath}
 hadoop jar LzmWikiIndex.jar LzmWikiIndex.MaxThreeLabel ${TF-IDFOutputPath}/part-r-00000 ${MaxThreeWordOutputPath}
+hadoop jar LzmWikiIndex.jar LzmWikiIndex.ExtractPage ${WikipediaPathOnHadoop} ${anyPath}
 ```
-5. `hadoop fs -get ${MaxThreeWordOutputPath}/part-r-00000 ${ThisRepoPath}`
-6. `cd view & yarn build`
-7. `cd .. & node bin/www` then you can see the web page at http://localhost:8000
+5. `cd view & yarn build`
+6. `hadoop fs -get ${MaxThreeWordOutputPath}/part-r-00000 ${ThisRepoPath}/build`
+7. `hadoop fs -get /Extractpages ${ThisRepoPath}/pages`
+8. `cd .. & node bin/www` then you can see the web page at http://localhost:8000
 
