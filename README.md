@@ -19,6 +19,7 @@ hadoop jar LzmWikiIndex.jar LzmWikiIndex.DF ${TFOutputPath}/part-r-00000 ${DFOut
 hadoop jar LzmWikiIndex.jar LzmWikiIndex.TF_IDF ${DFOutputPath}/part-r-00000 ${TFOutputPath}/part-r-00000 ${TF-IDFOutputPath}
 hadoop jar LzmWikiIndex.jar LzmWikiIndex.MaxThreeLabel ${TF-IDFOutputPath}/part-r-00000 ${MaxThreeWordOutputPath}
 ```
-5. `cd view & yarn build`
-6. `cd .. & node bin/www` then you can see the web page at http://localhost:8000
+5. `hadoop fs -get ${MaxThreeWordOutputPath}/part-r-00000 ${ThisRepoPath}`
+6. `cd view & yarn build`
+7. `cd .. & node bin/www` then you can see the web page at http://localhost:8000
 
