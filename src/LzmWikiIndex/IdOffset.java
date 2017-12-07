@@ -1,5 +1,10 @@
 package LzmWikiIndex;
 
+/**
+ * Created by lzmhhh123 on 12/7/17
+ * <lzmhhh123@gmail.com>
+ */
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
