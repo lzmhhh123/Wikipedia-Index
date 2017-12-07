@@ -3,14 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.0.17",
+    "axios": "^0.17.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
     "express": "^4.15.4",
     "express-cors": "0.0.3",
-    "express-session": "^1.15.2"
+    "express-session": "^1.15.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.0.17",
+    "react-uwp": "^1.1.8",
+    "body-parser": "~1.4.3"
   },
   "scripts": {
     "start": "react-scripts start",

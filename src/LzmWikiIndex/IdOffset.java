@@ -33,7 +33,7 @@ public class IdOffset {
 				int t = line.indexOf("</text>");
 				fw.write(String.valueOf(cnt + t * 4 - tmp) + '\n');
 			}
-			cnt += line.length() * 4;
+			cnt += line.length() * 4 + 4;
 		}
 		fw.close();
 		fr.close();
