@@ -23,5 +23,5 @@ hadoop jar LzmWikiIndex.jar LzmWikiIndex.MaxThreeLabel ${TF-IDFOutputPath}/part-
 6. `echo ${WikipediaFilePath} > WikipediaPath`
 6. `hadoop fs -get ${MaxThreeWordOutputPath}/part-r-00000 ${ThisRepoPath}/view/`
 7. `java -classpath LzmWikiIndex.jar LzmWikiIndex.IdOffset ${WikipediaFilePath} ${ThisRepoPath}/view/IdOffset`
-8. `cd .. & node bin/www` then you can see the web page at http://localhost:8000
+8. `node bin/www` then you can see the web page at http://localhost:8000
 
