@@ -25,3 +25,5 @@ hadoop jar LzmWikiIndex.jar LzmWikiIndex.MaxThreeLabel ${TF-IDFOutputPath}/part-
 7. `java -classpath LzmWikiIndex.jar LzmWikiIndex.IdOffset ${WikipediaFilePath} ${ThisRepoPath}/view/IdOffset`
 8. `node bin/www` then you can see the web page at http://localhost:8000
 
+## Preview
+<img src="/preview.jpg" />
