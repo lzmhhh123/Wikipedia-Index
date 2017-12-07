@@ -24,6 +24,7 @@ fs.readFile("./IdOffset", 'utf8', (err, data) => {
       'length': parseInt(array[1].split(' ')[1], 10),
     }
   }
+    console.log("IdOffset complete.");
 });
 
 fs.readFile("./part-r-00000", 'utf8', (err, data) => {
@@ -33,11 +34,17 @@ fs.readFile("./part-r-00000", 'utf8', (err, data) => {
   data = data.split('\n');
   for (let i = 0; i < data.length - 1; ++i) {
     let array = data[i].split('\t');
+    if (array.length === 1) array = data[i].split(' ');
     if (index[array[1]] === undefined) {
       index[array[1]] = [];
     }
-    index[array[1]] = index[array[1]].concat([array[0]]);
+    try {
+      index[array[1]].push(array[0]);
+    } catch (err) {
+      console.log(err);
+    }
   }
+  console.log("part complete.");
 })
 
 fs.readFile("./WikipediaPath", 'utf8', (err, data) => {
