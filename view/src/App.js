@@ -45,7 +45,7 @@ class App extends Component {
           />
           {
             this.state.searchable ? (this.state.table !== undefined ? <ListView
-              style={{width: 600, marginTop: 20}}
+              style={{width: 600, marginTop: 20, overflowY: 'auto'}}
               background="none"
               listSource={this.state.table.map((s, index) => {
                 return <div key={index} onClick={() => window.open(`/page/${s}`)}>
