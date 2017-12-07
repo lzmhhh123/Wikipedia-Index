@@ -11,7 +11,7 @@ public class IdOffset {
 		FileWriter fw = new FileWriter(args[1]);
 		BufferedReader br = new BufferedReader(fr);
 		String line = "";
-		long cnt = 0;
+		long cnt = 0, tmp = 0;
 		boolean isInPage = false;
 		String id = "";
 		while ((line = br.readLine()) != null) {
@@ -26,7 +26,12 @@ public class IdOffset {
 			if (line.indexOf("<text") >= 0) {
 				int s = line.indexOf("<text");
 				while (line.charAt(s) != '>') s++;
-				fw.write(id + ":" + String.valueOf(cnt + (s + 1) * 4) + '\n');
+				tmp = cnt + (s + 1) *4;
+				fw.write(id + ":" + String.valueOf(tmp) + ' ');
+			}
+			if (line.indexOf("</text>") >= 0) {
+				int t = line.indexOf("</text>");
+				fw.write(String.valueOf(cnt + t * 4 - tmp) + '\n');
 			}
 			cnt += line.length() * 4;
 		}
