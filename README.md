@@ -27,3 +27,4 @@ hadoop jar LzmWikiIndex.jar LzmWikiIndex.MaxThreeLabel ${TF-IDFOutputPath}/part-
 
 ## Preview
 <img src="/preview.jpg" />
+<img src="/preview2.jpg" />
