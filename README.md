@@ -47,6 +47,7 @@ WikipediaIndex
 │   ├── app.js                    //main node.js file
 │   ├── package.json
 │   └── yarn.lock
+├── LICENSE
 ├── preview.jpg
 ├── preview2.jpg
 └── README.md
