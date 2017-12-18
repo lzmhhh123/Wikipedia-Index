@@ -12,7 +12,7 @@ Using Hadoop File System and MapReduce Framework.
 1. `git clone https://github.com/lzmhhh123/Wikipedia-Index & cd Wikipedia-Index`
 2. Use the [Eclipse](https://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3) to export `.jar` package.
 3. `hadoop fs -put ${WikipediaFilePath} ${YourHadoopFileSystemPath}` to put Wikipedia on Hadoop file system.
-4. 
+4.
 ```
 hadoop jar LzmWikiIndex.jar LzmWikiIndex.TF ${WikipediaPathOnHadoop} ${TFOutputPath}
 hadoop jar LzmWikiIndex.jar LzmWikiIndex.DF ${TFOutputPath}/part-r-00000 ${DFOutputPath}
@@ -25,6 +25,45 @@ hadoop jar LzmWikiIndex.jar LzmWikiIndex.MaxThreeLabel ${TF-IDFOutputPath}/part-
 7. `java -classpath LzmWikiIndex.jar LzmWikiIndex.IdOffset ${WikipediaFilePath} ${ThisRepoPath}/view/IdOffset`
 8. `node bin/www` then you can see the web page at http://localhost:8000
 
+## Source File Architecture
+<pre>
+WikipediaIndex
+├── bin                           //Java class
+│   ├── DF.class
+│   ├── ...
+│   └── XmlInputFormat.class
+├── src                           //MapReduce source file
+│   ├── DF.java                   //count document frequency
+│   ├── ExtractPage.java          //extract each page to a independent file
+│   ├── IdOffset.java             //count each page's size & offset in Wikipedia
+│   ├── IntArrayWritable.java     //A class extends ArrayWritable
+│   ├── MaxThreeLabel.java        //count the biggest three TF-IDF words for each page
+│   ├── PageWordCount.java        //count the number of words for each PageWordCount
+│   ├── TextArrayWritable.java    //A class extends ArrayWritable
+│   ├── TF_IDF.java               //count term frequency–inverse document frequency
+│   ├── TF.java                   //count term frequency
+│   └── XmlInputFormat.java       //A class extends TextInputFormat
+├── view
+│   ├── bin
+│   │   └── www                   //start node.js server
+│   ├── public                    //frontend static file
+│   │   ├── favicon.ico
+│   │   ├── ...
+│   │   └── manifest.json
+│   ├── src                       //frontend source file
+│   │   ├── App.css
+│   │   ├── App.js
+│   │   ├── index.css
+│   │   ├── ...
+│   │   └── logo.svg
+│   ├── app.js                    //main node.js file
+│   ├── package.json
+│   └── yarn.lock
+├── preview.jpg
+├── preview2.jpg
+└── README.md
+</pre>
+
 ## Preview
-<img src="/preview.jpg" />
-<img src="/preview2.jpg" />
+![Alt text](/preview.jpg)
+![Alt text](/preview2.jpg)
